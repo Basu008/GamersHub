@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 //import com.example.gamershub.OtherUserProfile;
+import com.example.gamershub.OtherUserProfile;
 import com.example.gamershub.R;
 import com.parse.FindCallback;
 import com.parse.GetDataCallback;
@@ -67,11 +68,11 @@ public class UserRecyclerViewAdapter extends RecyclerView.Adapter<UserViewHolder
         });
 
         //Opens user's profile when tapped on it
-//        holder.getUsernameText().setOnClickListener(v -> {
-//            Intent intent = new Intent(context, OtherUserProfile.class);
-//            intent.putExtra("USERNAME", users.get(position).getUsername());
-//            context.startActivity(intent);
-//        });
+        holder.getUsernameText().setOnClickListener(v -> {
+            Intent intent = new Intent(context, OtherUserProfile.class);
+            intent.putExtra("USERNAME", users.get(position).getUsername());
+            context.startActivity(intent);
+        });
 
     }
 

@@ -36,9 +36,9 @@
     <string name="infoText">Before we start</string>
     <string name="infoText1">Enter you personal details here</string>
 
-    <!-- Parse dependencies for login-->
-    <string name="back4app_app_id">nrtCHuvhnruD3P9hAMYLi2lN15Ypw6I6q1PJBCGN</string>
-    <string name="back4app_client_key">ABV4ZUgkChQWamMFmYDTiMzRW0mGXfwO9GIaxqsp</string>
+
+    <string name="back4app_app_id">HlHX9mCiichUDGYiRxEpXoVVQrYvkyIVZa3jP2gE</string>
+    <string name="back4app_client_key">4oHhMAGeueF2tLUUwprb4XfIIEsqxkgYRqftyMbi</string>
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
 
     <!-- Nav Bar text-->
