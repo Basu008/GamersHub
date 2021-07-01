@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">GamersHub</string>
+
+
+    <!-- Sign up page Texts-->
+    <string name="emailText">Enter your email ID</string>
+    <string name="usernameText">Enter a username</string>
+    <string name="passwordText">Enter a password</string>
+    <string name="rePassText">Re enter the password</string>
+    <string name="passwordMisMatch">Password didn\'t match</string>
+
+    <!-- Sing in page Text-->
+    <string name="usernameSignIn">Enter your username</string>
+    <string name="passwordSignIn">Enter your password</string>
+
+    <!-- Personal Info text and button button-->
+    <string name="nameText">Full name</string>
+    <string name="phoneNoText">Phone Number</string>
+    <string name="dobText">Date of birth</string>
+    <string name="bioText">Describe yourself with a bio</string>
+    <string name="saveButton">Save</string>
+
+    <!--Button Text-->
+    <string name="signUp">Sign Up</string>
+    <string name="signIn">Sign In</string>
+    <string name="signOut">Sign Out</string>
+    <string name="todo">TODO</string>
+
+
+    <!-- Extra Text-->
+    <string name="seperationText">Already have an account? Sign in</string>
+    <string name="seperationText1">New here? Sign up for free</string>
+    <string name="welcomeText">Welcome to GamersHub, </string>
+
+    <!-- User info Text -->
+    <string name="infoText">Before we start</string>
+    <string name="infoText1">Enter you personal details here</string>
+
+    <!-- Parse dependencies for login-->
+    <string name="back4app_app_id">HlHX9mCiichUDGYiRxEpXoVVQrYvkyIVZa3jP2gE</string>
+    <string name="back4app_client_key">4oHhMAGeueF2tLUUwprb4XfIIEsqxkgYRqftyMbi</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Nav Bar text-->
+    <string name="title_activity_main_page">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_users">Users</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- User's page text-->
+    <string name="userPageTitle">Available Users</string>
+    <string name="userPageTitleDesc">Here you can see other user you can interact with, Let\'s make new friends</string>
+    <string name="followBtn">Follow</string>
+    <string name="unFollowBtn">Unfollow</string>
+
+    <!-- Profile page-->
+    <string name="usernamePlaceholder">Username</string>
+    <string name="name">Name</string>
+    <string name="dob">DOB</string>
+    <string name="divider">|</string>
+    <string name="bio">Enter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote here Enter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote hereEnter a quote here</string>
+    <string name="followers">0 followers</string>
+    <string name="following">0 following</string>
+    <string name="enter_bio_here">Enter bio here</string>
+
+    <!-- Upload page-->
+    <string name="upload_image">Upload Image</string>
+    <string name="choose_image">Choose an image</string>
+    <string name="enter_a_caption">Enter a caption</string>
+
+
+    <string name="place_holder_text">You can see the post of people you follow here</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="commentHint">Enter Comment</string>
+    <string name="placeHolderComment">You will see the comments on the post here</string>
+</resources>
