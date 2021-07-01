@@ -99,6 +99,8 @@ public class SignUp extends AppCompatActivity {
                 object.put("username", username);
                 object.put("following_list", "");
                 object.put("follower_list", "");
+                object.put("followers", 0);
+                object.put("following", 0);
                 object.saveInBackground();
                 showAlert("Account Created Successfully!", "Please verify your email before Login", false);
             } else {

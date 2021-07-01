@@ -1,4 +1,4 @@
-package com.example.gamershub.ui.home;
+package com.example.gamershub.ui.usersList;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gamershub.R;
 
-public class HomeFragment extends Fragment {
+public class UserListFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private UsersListViewModel usersListViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        usersListViewModel = new ViewModelProvider(this).get(UsersListViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_users, container, false);
         return root;
     }
 }

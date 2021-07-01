@@ -1,4 +1,4 @@
-package com.example.gamershub.ui.home;
+package com.example.gamershub.ui.upload;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gamershub.R;
 
-public class HomeFragment extends Fragment {
+public class UploadFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private UploadModel uploadModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        uploadModel = new ViewModelProvider(this).get(UploadModel.class);
+        View root = inflater.inflate(R.layout.fragment_upload, container, false);
         return root;
     }
 }
