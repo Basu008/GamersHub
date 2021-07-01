@@ -1,7 +1,8 @@
-package com.example.gamershub;
+package com.example.gamershub.ui;
 
 import android.os.Bundle;
 
+import com.example.gamershub.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gamershub">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -12,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GamersHub">
         <activity
-            android:name=".HomePage"
+            android:name=".ui.HomePage"
             android:label="@string/title_activity_home_page"/>
         <activity android:name=".signinactivities.UserInfo" />
         <activity android:name=".signinactivities.SignUp" />
