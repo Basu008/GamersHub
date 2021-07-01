@@ -74,4 +74,7 @@
     <string name="delete_post">Delete Post</string>
     <string name="commentHint">Enter Comment</string>
     <string name="placeHolderComment">You will see the comments on the post here</string>
+    <string name="title_activity_home_page">MainActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
