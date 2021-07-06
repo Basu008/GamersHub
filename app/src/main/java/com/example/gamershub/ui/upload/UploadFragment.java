@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -86,7 +87,9 @@ public class UploadFragment extends Fragment {
 
         chooseImage.setOnClickListener(v -> {
             //Asking permission if it's not given, using this method we will also choose the image
-            askForPermission();
+            //askForPermission();
+            showPopUp();
+
         });
 
         uploadImage.setOnClickListener(v -> {
@@ -182,4 +185,30 @@ public class UploadFragment extends Fragment {
                 }).check();
             }
 
+    private void showPopUp(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        View view = getLayoutInflater().inflate(R.layout.image_option_popup, null);
+
+        ImageView cameraOpt = view.findViewById(R.id.cameraOpt);
+        ImageView galleryOpt = view.findViewById(R.id.galleryOpt);
+
+        builder.setView(view);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        cameraOpt.setOnClickListener(v -> {
+            dialog.dismiss();
+            Toast.makeText(getContext(), "Camera is selected", Toast.LENGTH_SHORT).show();
+
+        });
+
+        galleryOpt.setOnClickListener(v -> {
+            dialog.dismiss();
+            Toast.makeText(getContext(), "Gallery is selected", Toast.LENGTH_SHORT).show();
+        });
+
+    }
 }

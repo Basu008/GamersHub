@@ -78,4 +78,6 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="view_comments">View comments</string>
+    <string name="gallery_text">Gallery</string>
+    <string name="camera_text">Camera</string>
 </resources>
