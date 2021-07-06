@@ -87,8 +87,7 @@ public class UploadFragment extends Fragment {
 
         chooseImage.setOnClickListener(v -> {
             //Asking permission if it's not given, using this method we will also choose the image
-            //askForPermission();
-            showPopUp();
+            askForPermission();
 
         });
 
@@ -163,7 +162,7 @@ public class UploadFragment extends Fragment {
                 DialogOnDeniedPermissionListener.Builder
                         .withContext(getContext())
                         .withTitle("Permission Needed")
-                        .withMessage("In order to proceed we need access to your external storage")
+                        .withMessage("In order to proceed we need access to your External Storage")
                         .withButtonText(android.R.string.ok)
                         .withIcon(R.drawable.warning)
                         .build();
@@ -184,31 +183,4 @@ public class UploadFragment extends Fragment {
                     }
                 }).check();
             }
-
-    private void showPopUp(){
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-
-        View view = getLayoutInflater().inflate(R.layout.image_option_popup, null);
-
-        ImageView cameraOpt = view.findViewById(R.id.cameraOpt);
-        ImageView galleryOpt = view.findViewById(R.id.galleryOpt);
-
-        builder.setView(view);
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-
-        cameraOpt.setOnClickListener(v -> {
-            dialog.dismiss();
-            Toast.makeText(getContext(), "Camera is selected", Toast.LENGTH_SHORT).show();
-
-        });
-
-        galleryOpt.setOnClickListener(v -> {
-            dialog.dismiss();
-            Toast.makeText(getContext(), "Gallery is selected", Toast.LENGTH_SHORT).show();
-        });
-
-    }
 }

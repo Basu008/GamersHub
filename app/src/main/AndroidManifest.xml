@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:name=".App"
@@ -15,13 +16,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GamersHub">
-        <activity android:name=".OtherUserProfile"></activity>
-        <activity android:name=".Comments" />
+        <activity android:name=".OtherUserProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Comments"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ui.HomePage"
-            android:label="@string/title_activity_home_page" />
-        <activity android:name=".signinactivities.UserInfo" />
-        <activity android:name=".signinactivities.SignUp" />
+            android:label="@string/title_activity_home_page"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".signinactivities.UserInfo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".signinactivities.SignUp"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.parse.SERVER_URL"
@@ -33,7 +39,8 @@
             android:name="com.parse.CLIENT_KEY"
             android:value="@string/back4app_client_key" />
 
-        <activity android:name=".signinactivities.SignIn">
+        <activity android:name=".signinactivities.SignIn"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
