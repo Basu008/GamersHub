@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +31,13 @@ public class Comments extends AppCompatActivity {
 
     //String to hold post's Id
     private String postId;
+    private String commentBy;
+
 
     //UI component declaration
     private TextView placeHolder;
+    private TextView newComment;
+    private ImageView saveComment;
 
     //List of Comment objects to store the value of all the comments of a post
     private ArrayList<Comment> comments = new ArrayList<>();
@@ -46,11 +52,40 @@ public class Comments extends AppCompatActivity {
 
         //TextView initialisation
         placeHolder = findViewById(R.id.placeHolderComment);
+        newComment = findViewById(R.id.addNewComment);
+        saveComment = findViewById(R.id.postNewComment);
 
         //Gets postId from the Post fragment
         postId = getIntent().getStringExtra("POST_ID");
+        commentBy = getIntent().getStringExtra("USERNAME");
 
         commentsList.setLayoutManager(new LinearLayoutManager(this));
+
+
+        saveComment.setOnClickListener(v -> {
+            if(!newComment.getText().toString().isEmpty() && !newComment.getText().toString().equals("")){
+                ParseObject object = new ParseObject("Comments");
+                object.put("postId", postId);
+                object.put("comment_by", commentBy);
+                object.put("comment", newComment.getText().toString());
+                object.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if(e == null){
+                            Toast.makeText(Comments.this, "Comment added", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                            Toast.makeText(Comments.this, "Comment can't be added", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
         ParseQuery<ParseUser> userQuery = ParseUser.getQuery();
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Comments");

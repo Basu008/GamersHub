@@ -1,5 +1,6 @@
 package com.example.gamershub.postRecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -54,8 +55,9 @@ public class PostRecyclerViewAdapter extends RecyclerView.Adapter<PostViewHolder
         return new PostViewHolder(view);
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PostViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         progressDialog.setMessage("Setting things up..");
 
@@ -166,7 +168,10 @@ public class PostRecyclerViewAdapter extends RecyclerView.Adapter<PostViewHolder
 
         //For user to add a comment
         holder.getComment().setOnClickListener(v -> {
-            PostManager.addNewComment(ParseUser.getCurrentUser().getUsername(), context, posts.get(position).getPostId());
+            Intent intent = new Intent(context, Comments.class);
+            intent.putExtra("POST_ID", posts.get(position).getPostId());
+            intent.putExtra("USERNAME", ParseUser.getCurrentUser().getUsername());
+            context.startActivity(intent);
         });
 
         //For user to view all comments

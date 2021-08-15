@@ -8,11 +8,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/commentsList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="398dp"
+        android:layout_height="603dp"
         android:layout_margin="10dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,5 +30,35 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentsList"
+        app:layout_constraintVertical_bias="0.99">
+
+                <EditText
+                    android:id="@+id/addNewComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:hint="@string/commentHint"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/postNewComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
